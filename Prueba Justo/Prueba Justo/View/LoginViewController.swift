@@ -11,6 +11,7 @@ import MaterialOutlinedTextField
 class LoginViewController: UIViewController {
     // MARK: - Variable declaration
     private var iconClickPass = true
+    private let loginVM = LoginViewModel()
     
     // MARK: - View declaration
     private let imageLogo: UIImageView = {
@@ -162,7 +163,7 @@ class LoginViewController: UIViewController {
         let tapGestureRecognizerPass = UITapGestureRecognizer(target: self, action: #selector(imageTappedPass(tapGestureRecognizer:)))
         imageIconPass.isUserInteractionEnabled = true
         imageIconPass.addGestureRecognizer(tapGestureRecognizerPass)
-        btnLogin.addTarget(self, action: #selector(btnContinueAction), for: .allTouchEvents)
+        btnLogin.addTarget(self, action: #selector(btnContinueAction), for: .touchUpInside)
         txfPassword.rightView = imageIconPass
     }
     
@@ -183,6 +184,7 @@ class LoginViewController: UIViewController {
     @objc func btnContinueAction() {
         if validateEmail(enteredEmail: txfEmail.text ?? "") {
             lblPassAlert.isHidden = true
+            login()
         } else {
             lblPassAlert.text = "Formato de email inválido"
             lblPassAlert.isHidden = false
@@ -194,6 +196,27 @@ class LoginViewController: UIViewController {
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         
         return emailPredicate.evaluate(with: enteredEmail)
+    }
+    
+    private func login() {
+        let loader = self.loader()
+        if let email = self.txfEmail.text, let password = self.txfPassword.text{
+            loginVM.fetchLogin(email, password) { response in
+                if response {
+                    DispatchQueue.main.async {
+                        let vc = ProfileViewController()
+                        self.navigationController?.pushViewController(vc, animated: true)
+                        self.stopLoader(loader: loader)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.stopLoader(loader: loader)
+                        self.lblPassAlert.text = "Email o contraseña incorrecta, intente de nuevo!"
+                        self.lblPassAlert.isHidden = false
+                    }
+                }
+            }
+        }
     }
 }
 

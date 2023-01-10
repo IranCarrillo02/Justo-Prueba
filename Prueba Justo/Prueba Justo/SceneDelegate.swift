@@ -14,10 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.windowScene = windowScene
-        window?.rootViewController = LoginViewController()
-        window?.makeKeyAndVisible()
+        getRoot(windowScene, LoginViewController())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,6 +45,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    private func getRoot(_ scene: UIWindowScene, _ view: UIViewController) {
+        let navController = UINavigationController(rootViewController: view)
+        navController.setNavigationBarHidden(true, animated: true)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.windowScene = scene
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
+    }
 }
 

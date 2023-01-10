@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4185C34296D30E70016AC81 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4185C33296D30E70016AC81 /* LoginViewModel.swift */; };
 		E440540C296CE9F40033549B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540B296CE9F40033549B /* AppDelegate.swift */; };
 		E440540E296CE9F40033549B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540D296CE9F40033549B /* SceneDelegate.swift */; };
 		E4405415296CE9F50033549B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4405414296CE9F50033549B /* Assets.xcassets */; };
@@ -50,9 +51,12 @@
 		E4405480296D1E450033549B /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440547B296D1E450033549B /* IQUITextFieldView+Additions.swift */; };
 		E4405481296D1E450033549B /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440547C296D1E450033549B /* IQNSArray+Sort.swift */; };
 		E4405482296D1E450033549B /* IQUIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440547D296D1E450033549B /* IQUIViewController+Additions.swift */; };
+		E4405484296D227C0033549B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4405483296D227C0033549B /* GoogleService-Info.plist */; };
+		E4405487296D24B00033549B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E4405486296D24B00033549B /* FirebaseAuth */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4185C33296D30E70016AC81 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E4405408296CE9F40033549B /* Prueba Justo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba Justo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E440540B296CE9F40033549B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E440540D296CE9F40033549B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		E440547B296D1E450033549B /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		E440547C296D1E450033549B /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		E440547D296D1E450033549B /* IQUIViewController+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIViewController+Additions.swift"; sourceTree = "<group>"; };
+		E4405483296D227C0033549B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4405438296CEDC60033549B /* RxAlamofire in Frameworks */,
+				E4405487296D24B00033549B /* FirebaseAuth in Frameworks */,
 				E4405448296D00020033549B /* MaterialOutlinedTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +145,7 @@
 				E4405414296CE9F50033549B /* Assets.xcassets */,
 				E4405416296CE9F50033549B /* LaunchScreen.storyboard */,
 				E4405419296CE9F50033549B /* Info.plist */,
+				E4405483296D227C0033549B /* GoogleService-Info.plist */,
 			);
 			path = "Prueba Justo";
 			sourceTree = "<group>";
@@ -147,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				E4405430296CED680033549B /* Config */,
+				E4185C33296D30E70016AC81 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 			packageProductDependencies = (
 				E4405437296CEDC60033549B /* RxAlamofire */,
 				E4405447296D00020033549B /* MaterialOutlinedTextField */,
+				E4405486296D24B00033549B /* FirebaseAuth */,
 			);
 			productName = "Prueba Justo";
 			productReference = E4405408296CE9F40033549B /* Prueba Justo.app */;
@@ -333,6 +342,7 @@
 			packageReferences = (
 				E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 				E4405446296D00020033549B /* XCRemoteSwiftPackageReference "MaterialOutlinedTextField" */,
+				E4405485296D24B00033549B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = E4405409296CE9F40033549B /* Products */;
 			projectDirPath = "";
@@ -350,6 +360,7 @@
 			files = (
 				E4405418296CE9F50033549B /* LaunchScreen.storyboard in Resources */,
 				E4405415296CE9F50033549B /* Assets.xcassets in Resources */,
+				E4405484296D227C0033549B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +375,7 @@
 				E440545F296D1DB30033549B /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				E440542C296CED600033549B /* ServiceConfig.swift in Sources */,
 				E4405461296D1DB30033549B /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				E4185C34296D30E70016AC81 /* LoginViewModel.swift in Sources */,
 				E440545C296D1DB30033549B /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				E440547F296D1E450033549B /* IQUIView+Hierarchy.swift in Sources */,
 				E4405482296D1E450033549B /* IQUIViewController+Additions.swift in Sources */,
@@ -540,6 +552,7 @@
 				DEVELOPMENT_TEAM = 8VCZWUJGUH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Prueba Justo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Justo.mx;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -571,6 +584,7 @@
 				DEVELOPMENT_TEAM = 8VCZWUJGUH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Prueba Justo/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Justo.mx;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -632,6 +646,14 @@
 				kind = branch;
 			};
 		};
+		E4405485296D24B00033549B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -644,6 +666,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E4405446296D00020033549B /* XCRemoteSwiftPackageReference "MaterialOutlinedTextField" */;
 			productName = MaterialOutlinedTextField;
+		};
+		E4405486296D24B00033549B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4405485296D24B00033549B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
