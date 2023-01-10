@@ -375,7 +375,12 @@ class ProfileViewController: UIViewController {
                     let alert = UIAlertController(title: "Error de conexion", message: "Hubo un problema al conectar con los servicios, intente más tarde.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Reintentar", style: .default, handler: { action in
                         self.defaults.set(false, forKey: "LogIn")
-                        self.navigationController?.popViewController(animated: true)
+                        if let view = self.navigationController?.viewControllers.filter({ $0 is LoginViewController}).first {
+                            self.navigationController?.popToViewController(view, animated: true)
+                        } else {
+                            let view = LoginViewController()
+                            self.navigationController?.pushViewController(view, animated: true)
+                        }
                     }))
                     self.present(alert, animated: false, completion: nil)
                 }
