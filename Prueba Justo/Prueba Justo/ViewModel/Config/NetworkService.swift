@@ -43,7 +43,6 @@ public class NetworkServiceImpl: NetworkService {
     }()
     private let configuration: ServiceConfig
     private let encodeUtils: EncodeUtils
-    private let constants = ConstantsDelegate()
     
     required init(configuration: ServiceConfig, encodeUtils: EncodeUtils = EncodeUtils()) {
         self.configuration = configuration
@@ -90,23 +89,8 @@ public class NetworkServiceImpl: NetworkService {
                     case let .success(value):
                         do {
                             if let decodedResponse = try self?.encodeUtils.get(T.self, from: value) {
-                                if response.response?.statusCode == 500 || response.response?.statusCode == 400 {
-                                    do {
-                                        if let decodedResponse = try self?.encodeUtils.get(ErrorResponse.self, from: value) {
-                                            self?.constants.appDelegate.modalTicketMessage = decodedResponse.errorMessage
-                                            observer.onError(EncodeUtilsErrors.castError)
-                                        } else if let decodedResponse = try self?.encodeUtils.get(ErrorLoginResponse.self, from: value) {
-                                            if decodedResponse.error_description == "Account locked" {
-                                                observer.onError(EncodeUtilsErrors.lockedError)
-                                            } else if decodedResponse.error_description == "Bad credentials" {
-                                                observer.onError(EncodeUtilsErrors.badCredentialsError)
-                                            } else {
-                                                observer.onError(EncodeUtilsErrors.cantDecodeData)
-                                            }
-                                        }
-                                    } catch {
-                                        observer.onError(EncodeUtilsErrors.cantDecodeData)
-                                    }
+                                if response.response?.statusCode == 500 {
+                                    observer.onError(EncodeUtilsErrors.cantDecodeData)
                                 } else {
                                     observer.onNext(decodedResponse)
                                     observer.onCompleted()
@@ -115,21 +99,7 @@ public class NetworkServiceImpl: NetworkService {
                                 observer.onError(EncodeUtilsErrors.cantDecodeData)
                             }
                         } catch {
-                            if response.response?.statusCode == 400 {
-                                do {
-                                    if let decodedResponse = try self?.encodeUtils.get(ErrorLoginResponse.self, from: value) {
-                                        if decodedResponse.error_description == "Account locked" {
-                                            observer.onError(EncodeUtilsErrors.lockedError)
-                                        } else if decodedResponse.error_description == "Bad credentials" {
-                                            observer.onError(EncodeUtilsErrors.badCredentialsError)
-                                        } else {
-                                            observer.onError(EncodeUtilsErrors.cantDecodeData)
-                                        }
-                                    }
-                                } catch {
-                                    observer.onError(error)
-                                }
-                            }
+                            observer.onError(EncodeUtilsErrors.cantDecodeData)
                         }
                     case let .failure(error):
                         observer.onError(error)
@@ -176,4 +146,3 @@ public class NetworkServiceImpl: NetworkService {
         }
     }
 }
-

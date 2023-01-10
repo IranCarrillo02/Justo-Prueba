@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "materialoutlinedtextfield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/flowbe/MaterialOutlinedTextField.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0e60b562be2cdc8b3fddc4e95930a245fb804a64"
+      }
+    },
+    {
       "identity" : "rxalamofire",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RxSwiftCommunity/RxAlamofire.git",
