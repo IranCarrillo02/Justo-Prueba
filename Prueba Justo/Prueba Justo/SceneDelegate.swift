@@ -10,11 +10,16 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private let defaults = UserDefaults.standard
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        getRoot(windowScene, LoginViewController())
+        if self.defaults.bool(forKey: "LogIn") {
+            getRoot(windowScene, ProfileViewController())
+        } else {
+            getRoot(windowScene, LoginViewController())
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -48,8 +53,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     private func getRoot(_ scene: UIWindowScene, _ view: UIViewController) {
         let navController = UINavigationController(rootViewController: view)
         navController.setNavigationBarHidden(true, animated: true)
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.windowScene = scene
+        window = UIWindow(windowScene: scene)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }

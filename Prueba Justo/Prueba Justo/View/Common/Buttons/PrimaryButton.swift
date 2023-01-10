@@ -2,7 +2,7 @@
 //  PrimaryButton.swift
 //  Prueba Justo
 //
-//  Created by Desarrollo Ordenaris on 09/01/23.
+//  Created by Iran Carrillo on 09/01/23.
 //
 
 import UIKit
@@ -68,6 +68,13 @@ extension ButtonPrimary {
             btnPrimary.layer.borderWidth = 2.0
             btnPrimary.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
             btnPrimary.isEnabled = true
+        case .close:
+            btnPrimary.backgroundColor = UIColor.white
+            btnPrimary.setTitleColor(AppColors.login_green, for: .normal)
+            btnPrimary.layer.borderColor = AppColors.login_green.cgColor
+            btnPrimary.layer.borderWidth = 2.0
+            btnPrimary.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
+            btnPrimary.isEnabled = false
         }
     }
     
@@ -85,6 +92,12 @@ extension ButtonPrimary {
             btnPrimary.layer.borderWidth = 2.0
             btnPrimary.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
             btnPrimary.isEnabled = true
+        case .close:
+            btnPrimary.backgroundColor = UIColor.white
+            btnPrimary.setTitleColor(AppColors.login_green, for: .normal)
+            btnPrimary.layer.borderColor = AppColors.login_green.cgColor
+            btnPrimary.layer.borderWidth = 2.0
+            btnPrimary.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20.0)
         }
     }
 }

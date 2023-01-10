@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		E4185C34296D30E70016AC81 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4185C33296D30E70016AC81 /* LoginViewModel.swift */; };
+		E4185C36296D385C0016AC81 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4185C35296D385C0016AC81 /* ProfileModel.swift */; };
+		E4185C39296D3B750016AC81 /* ApiProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4185C38296D3B750016AC81 /* ApiProfile.swift */; };
+		E4185C3B296D3F270016AC81 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4185C3A296D3F270016AC81 /* ProfileViewModel.swift */; };
+		E4185C3E296D428E0016AC81 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E4185C3D296D428E0016AC81 /* SDWebImage */; };
+		E4185C40296DC7AC0016AC81 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4185C3F296DC7AC0016AC81 /* DetailsViewController.swift */; };
 		E440540C296CE9F40033549B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540B296CE9F40033549B /* AppDelegate.swift */; };
 		E440540E296CE9F40033549B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540D296CE9F40033549B /* SceneDelegate.swift */; };
 		E4405415296CE9F50033549B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4405414296CE9F50033549B /* Assets.xcassets */; };
@@ -57,6 +62,10 @@
 
 /* Begin PBXFileReference section */
 		E4185C33296D30E70016AC81 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		E4185C35296D385C0016AC81 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		E4185C38296D3B750016AC81 /* ApiProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProfile.swift; sourceTree = "<group>"; };
+		E4185C3A296D3F270016AC81 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		E4185C3F296DC7AC0016AC81 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E4405408296CE9F40033549B /* Prueba Justo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba Justo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E440540B296CE9F40033549B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E440540D296CE9F40033549B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +120,7 @@
 			files = (
 				E4405438296CEDC60033549B /* RxAlamofire in Frameworks */,
 				E4405487296D24B00033549B /* FirebaseAuth in Frameworks */,
+				E4185C3E296D428E0016AC81 /* SDWebImage in Frameworks */,
 				E4405448296D00020033549B /* MaterialOutlinedTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4185C37296D3B640016AC81 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E4185C38296D3B750016AC81 /* ApiProfile.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		E44053FF296CE9F30033549B = {
 			isa = PBXGroup;
 			children = (
@@ -153,8 +171,10 @@
 		E440541F296CED110033549B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				E4405430296CED680033549B /* Config */,
 				E4185C33296D30E70016AC81 /* LoginViewModel.swift */,
+				E4185C3A296D3F270016AC81 /* ProfileViewModel.swift */,
+				E4185C37296D3B640016AC81 /* Services */,
+				E4405430296CED680033549B /* Config */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -164,6 +184,7 @@
 			children = (
 				E440543E296CF7370033549B /* LoginViewController.swift */,
 				E4405440296CF7440033549B /* ProfileViewController.swift */,
+				E4185C3F296DC7AC0016AC81 /* DetailsViewController.swift */,
 				E4405449296D04BD0033549B /* Common */,
 				E4405439296CEE1D0033549B /* Helpers */,
 			);
@@ -173,6 +194,7 @@
 		E4405421296CED330033549B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E4185C35296D385C0016AC81 /* ProfileModel.swift */,
 				E4405431296CED7F0033549B /* ModelConfig */,
 			);
 			path = Model;
@@ -310,6 +332,7 @@
 				E4405437296CEDC60033549B /* RxAlamofire */,
 				E4405447296D00020033549B /* MaterialOutlinedTextField */,
 				E4405486296D24B00033549B /* FirebaseAuth */,
+				E4185C3D296D428E0016AC81 /* SDWebImage */,
 			);
 			productName = "Prueba Justo";
 			productReference = E4405408296CE9F40033549B /* Prueba Justo.app */;
@@ -343,6 +366,7 @@
 				E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 				E4405446296D00020033549B /* XCRemoteSwiftPackageReference "MaterialOutlinedTextField" */,
 				E4405485296D24B00033549B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E4185C3C296D428E0016AC81 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = E4405409296CE9F40033549B /* Products */;
 			projectDirPath = "";
@@ -374,8 +398,11 @@
 				E4405481296D1E450033549B /* IQNSArray+Sort.swift in Sources */,
 				E440545F296D1DB30033549B /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				E440542C296CED600033549B /* ServiceConfig.swift in Sources */,
+				E4185C40296DC7AC0016AC81 /* DetailsViewController.swift in Sources */,
 				E4405461296D1DB30033549B /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				E4185C39296D3B750016AC81 /* ApiProfile.swift in Sources */,
 				E4185C34296D30E70016AC81 /* LoginViewModel.swift in Sources */,
+				E4185C36296D385C0016AC81 /* ProfileModel.swift in Sources */,
 				E440545C296D1DB30033549B /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				E440547F296D1E450033549B /* IQUIView+Hierarchy.swift in Sources */,
 				E4405482296D1E450033549B /* IQUIViewController+Additions.swift in Sources */,
@@ -397,6 +424,7 @@
 				E440546F296D1E010033549B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				E440540E296CE9F40033549B /* SceneDelegate.swift in Sources */,
 				E440542E296CED600033549B /* EncodeUtils.swift in Sources */,
+				E4185C3B296D3F270016AC81 /* ProfileViewModel.swift in Sources */,
 				E440545E296D1DB30033549B /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				E4405480296D1E450033549B /* IQUITextFieldView+Additions.swift in Sources */,
 				E4405435296CEDA20033549B /* Request.swift in Sources */,
@@ -630,6 +658,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E4185C3C296D428E0016AC81 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
@@ -657,6 +693,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E4185C3D296D428E0016AC81 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4185C3C296D428E0016AC81 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		E4405437296CEDC60033549B /* RxAlamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */;

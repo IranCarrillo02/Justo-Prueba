@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  Prueba Justo
 //
-//  Created by Desarrollo Ordenaris on 09/01/23.
+//  Created by Iran Carrillo on 09/01/23.
 //
 
 import UIKit
@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     // MARK: - Variable declaration
     private var iconClickPass = true
     private let loginVM = LoginViewModel()
+    private let defaults = UserDefaults.standard
     
     // MARK: - View declaration
     private let imageLogo: UIImageView = {
@@ -38,7 +39,7 @@ class LoginViewController: UIViewController {
         txfEmail.setColorModel(ColorModel(textColor: AppColors.login_green, floatingLabelColor: AppColors.login_green, normalLabelColor: AppColors.login_green, outlineColor: AppColors.login_green), for: .normal)
         txfEmail.setColorModel(ColorModel(textColor: AppColors.login_green, floatingLabelColor: AppColors.login_green, normalLabelColor: AppColors.login_green, outlineColor: AppColors.login_green), for: .editing)
         txfEmail.clearButtonMode = .whileEditing
-        txfEmail.keyboardType = .default
+        txfEmail.keyboardType = .emailAddress
         
         return txfEmail
     }()
@@ -204,6 +205,7 @@ class LoginViewController: UIViewController {
             loginVM.fetchLogin(email, password) { response in
                 if response {
                     DispatchQueue.main.async {
+                        self.defaults.set(true, forKey: "LogIn")
                         let vc = ProfileViewController()
                         self.navigationController?.pushViewController(vc, animated: true)
                         self.stopLoader(loader: loader)

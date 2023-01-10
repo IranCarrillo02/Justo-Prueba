@@ -2,7 +2,7 @@
 //  AppConstraints.swift
 //  Prueba Justo
 //
-//  Created by Desarrollo Ordenaris on 09/01/23.
+//  Created by Iran Carrillo on 09/01/23.
 //
 
 import UIKit
@@ -36,4 +36,5 @@ enum AppConstraints {
     static let padding160: CGFloat  = 160
     static let padding180: CGFloat  = 180
     static let padding200: CGFloat  = 200
+    static let padding270: CGFloat  = 270
 }
