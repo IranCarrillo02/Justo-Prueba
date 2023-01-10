@@ -9,21 +9,34 @@
 /* Begin PBXBuildFile section */
 		E440540C296CE9F40033549B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540B296CE9F40033549B /* AppDelegate.swift */; };
 		E440540E296CE9F40033549B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540D296CE9F40033549B /* SceneDelegate.swift */; };
-		E4405410296CE9F40033549B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440540F296CE9F40033549B /* ViewController.swift */; };
-		E4405413296CE9F40033549B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4405411296CE9F40033549B /* Main.storyboard */; };
 		E4405415296CE9F50033549B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4405414296CE9F50033549B /* Assets.xcassets */; };
 		E4405418296CE9F50033549B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4405416296CE9F50033549B /* LaunchScreen.storyboard */; };
+		E440542A296CED600033549B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405427296CED600033549B /* NetworkService.swift */; };
+		E440542B296CED600033549B /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405429296CED600033549B /* Enviroment.swift */; };
+		E440542C296CED600033549B /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405428296CED600033549B /* ServiceConfig.swift */; };
+		E440542E296CED600033549B /* EncodeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405426296CED600033549B /* EncodeUtils.swift */; };
+		E440542F296CED600033549B /* HeaderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405424296CED600033549B /* HeaderFactory.swift */; };
+		E4405434296CEDA20033549B /* Initable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405432296CEDA20033549B /* Initable.swift */; };
+		E4405435296CEDA20033549B /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4405433296CEDA20033549B /* Request.swift */; };
+		E4405438296CEDC60033549B /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4405437296CEDC60033549B /* RxAlamofire */; };
+		E440543B296CEE430033549B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E440543A296CEE430033549B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4405408296CE9F40033549B /* Prueba Justo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prueba Justo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E440540B296CE9F40033549B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E440540D296CE9F40033549B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E440540F296CE9F40033549B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4405412296CE9F40033549B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4405414296CE9F50033549B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4405417296CE9F50033549B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4405419296CE9F50033549B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4405424296CED600033549B /* HeaderFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFactory.swift; sourceTree = "<group>"; };
+		E4405426296CED600033549B /* EncodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodeUtils.swift; sourceTree = "<group>"; };
+		E4405427296CED600033549B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E4405428296CED600033549B /* ServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
+		E4405429296CED600033549B /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
+		E4405432296CEDA20033549B /* Initable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Initable.swift; sourceTree = "<group>"; };
+		E4405433296CEDA20033549B /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E440543A296CEE430033549B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4405438296CEDC60033549B /* RxAlamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +70,69 @@
 		E440540A296CE9F40033549B /* Prueba Justo */ = {
 			isa = PBXGroup;
 			children = (
+				E4405421296CED330033549B /* Model */,
+				E4405420296CED2D0033549B /* View */,
+				E440541F296CED110033549B /* ViewModel */,
 				E440540B296CE9F40033549B /* AppDelegate.swift */,
 				E440540D296CE9F40033549B /* SceneDelegate.swift */,
-				E440540F296CE9F40033549B /* ViewController.swift */,
-				E4405411296CE9F40033549B /* Main.storyboard */,
 				E4405414296CE9F50033549B /* Assets.xcassets */,
 				E4405416296CE9F50033549B /* LaunchScreen.storyboard */,
 				E4405419296CE9F50033549B /* Info.plist */,
 			);
 			path = "Prueba Justo";
+			sourceTree = "<group>";
+		};
+		E440541F296CED110033549B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4405430296CED680033549B /* Config */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E4405420296CED2D0033549B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4405439296CEE1D0033549B /* Helpers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4405421296CED330033549B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4405431296CED7F0033549B /* ModelConfig */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4405430296CED680033549B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				E4405426296CED600033549B /* EncodeUtils.swift */,
+				E4405429296CED600033549B /* Enviroment.swift */,
+				E4405424296CED600033549B /* HeaderFactory.swift */,
+				E4405427296CED600033549B /* NetworkService.swift */,
+				E4405428296CED600033549B /* ServiceConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E4405431296CED7F0033549B /* ModelConfig */ = {
+			isa = PBXGroup;
+			children = (
+				E4405432296CEDA20033549B /* Initable.swift */,
+				E4405433296CEDA20033549B /* Request.swift */,
+			);
+			path = ModelConfig;
+			sourceTree = "<group>";
+		};
+		E4405439296CEE1D0033549B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E440543A296CEE430033549B /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +151,9 @@
 			dependencies = (
 			);
 			name = "Prueba Justo";
+			packageProductDependencies = (
+				E4405437296CEDC60033549B /* RxAlamofire */,
+			);
 			productName = "Prueba Justo";
 			productReference = E4405408296CE9F40033549B /* Prueba Justo.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +182,9 @@
 				Base,
 			);
 			mainGroup = E44053FF296CE9F30033549B;
+			packageReferences = (
+				E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+			);
 			productRefGroup = E4405409296CE9F40033549B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +201,6 @@
 			files = (
 				E4405418296CE9F50033549B /* LaunchScreen.storyboard in Resources */,
 				E4405415296CE9F50033549B /* Assets.xcassets in Resources */,
-				E4405413296CE9F40033549B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +211,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4405410296CE9F40033549B /* ViewController.swift in Sources */,
+				E440542C296CED600033549B /* ServiceConfig.swift in Sources */,
+				E4405434296CEDA20033549B /* Initable.swift in Sources */,
 				E440540C296CE9F40033549B /* AppDelegate.swift in Sources */,
+				E440542A296CED600033549B /* NetworkService.swift in Sources */,
+				E440542B296CED600033549B /* Enviroment.swift in Sources */,
+				E440543B296CEE430033549B /* Extensions.swift in Sources */,
 				E440540E296CE9F40033549B /* SceneDelegate.swift in Sources */,
+				E440542E296CED600033549B /* EncodeUtils.swift in Sources */,
+				E4405435296CEDA20033549B /* Request.swift in Sources */,
+				E440542F296CED600033549B /* HeaderFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E4405411296CE9F40033549B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4405412296CE9F40033549B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4405416296CE9F50033549B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +364,6 @@
 				INFOPLIST_FILE = "Prueba Justo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +391,6 @@
 				INFOPLIST_FILE = "Prueba Justo/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4405437296CEDC60033549B /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4405436296CEDC60033549B /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4405400296CE9F30033549B /* Project object */;
 }
